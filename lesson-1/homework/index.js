@@ -66,3 +66,12 @@ speedBtn.onclick = () => {
     speedOut.innerHTML = distInp.value / timeInp.value + ' km/h';
 }
 
+// USD to EUR converter
+const eur = 0.95;
+let usdInp = document.querySelector('.usd-inp');
+let convBtn = document.querySelector('.usd-convert');
+let convOut = document.querySelector('.converter-out');
+
+convBtn.onclick = () => {
+    convOut.innerHTML = usdInp.value * eur;
+}

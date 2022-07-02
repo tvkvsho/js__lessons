@@ -16,6 +16,7 @@ let lalala;   --Змінна не правильна, бо використан�
 let !name;
 let n@me;
 let .name;
+let name One;
 
 */
 

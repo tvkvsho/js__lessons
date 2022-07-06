@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" class="input">
+    <select class="simbol">
+        <option>+</option>
+        <option>-</option>
+    </select>
+    <input type="text" class="input2">
+
+    <button class="res">Result</button>
+    <h2>
+        Result = "<span class="out"></span>"
+    </h2>
+
+    <script>
+        let str = 'Hello';
+        let num = 19;
+
+        let inp = document.querySelector('.input');
+        let inp2 = document.querySelector('.input2');
+        let sim = document.querySelector('.simbol');
+        let res = document.querySelector('.res');
+        let out = document.querySelector('.out');
+
+        // function result() {
+        //     console.log("sasha");
+        // }
+
+        res.onclick = () => {
+            console.log(sim.value);
+            // if (sim.value == '+') {
+            //     out.innerHTML = +inp.value + +inp2.value
+            // } else if (sim.value == '-') {
+            //     out.innerHTML = +inp.value - +inp2.value
+            // }
+            //out.innerHTML = Number(inp.value) + Number(inp2.value)
+            // out.innerHTML = +inp.value + +inp2.value;
+
+        };
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

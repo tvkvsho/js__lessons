@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="inp" type="text" placeholder="Name">
+    <div class="out"></div>
+    <button class="btn">serch</button>
+
+    <script>
+        const users = []
+
+        let inp = document.querySelector('.inp');
+
+        document.querySelector('.btn').onclick = () => {
+            for (let i = 0; i < users.lenght; i++) {
+                if (users[i] == inp.value) {
+                    document.querySelector('.out').innerHTML = 'Hello ' + users[i];
+                    break;
+                }
+            }
+        }
+
+        //console.log(users[2]);
+    </script>
+</body>
+
+</html>

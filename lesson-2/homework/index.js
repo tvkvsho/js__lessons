@@ -35,3 +35,6 @@ grocBtn.onclick = () => {
     chocoOut.innerHTML = 'You will get ' + (Math.round(walletInp.value / chocoInp.value)) + ' chocolates. And your remaining is ' + (walletInp.value % chocoInp.value);
 }
 
+// Task 5 - reversed number
+
+

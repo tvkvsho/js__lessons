@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="inp" type="text" placeholder="Name">
+    <!-- <select name="" id="">
+        <option value="0">Бумага</option>
+        <option value="1">Ножницы</option>
+        <option value="2">Кммень</option>
+    </select> -->
+    <div class="out"></div>
+    <button class="btn">serch</button>
+    <!-- 
+    0 = Бумага
+    1 = Ножницы
+    2 = Кммень
+    3 = Колодец 
+-->
+
+    <script>
+        let inp = document.querySelector('.inp');
+        let out = document.querySelector('.out');
+
+        document.querySelector('.btn').onclick = () => {
+            let random = Math.floor(Math.random() * 4);
+
+            if (inp.value == 1) {
+                if (random == 0) {
+                    out.innerHTML = `Победа`
+                } else if (random == 1) {
+                    out.innerHTML = `Ничя`
+                }
+                else {
+                    out.innerHTML = `Проиграл`
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

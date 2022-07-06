@@ -19,25 +19,34 @@
 // Task 5.
 // Создайте две переменные e2 = 3 и f2 = 0. Выведите на страницу  в .out-5 результат деления e2 на f2.
 
-// document.querySelector('.out-5').textContent = 
+let e2 = 3;
+let f2 = 0;
+document.querySelector('.out-5').textContent = e2 / f2;
 
 // Task 6.
 // Создайте две переменные e3 = 3 и f3 = 'Hello'. Выведите на страницу  в .out-6 результат сложения двух переменных.
+
+let e3 = 3;
+let f3 = 'Hello';
+document.querySelector('.out-6').textContent = e3 + f3;
 
 // document.querySelector('.out-6').textContent = 
 
 // Task 7.
 // Создайте две переменные e4 = 3 и f4 = 'Hello'. Выведите на страницу  в .out-7 результат умножения двух переменных.
 
-// document.querySelector('.out-7').textContent = 
+let e4 = 3;
+let f4 = 'Hello'
+document.querySelector('.out-7').textContent = e4 * f4
 
 // Task 8.
 // По нажатию на кнопку .b-8 выполняется функция, которая выводит в div.out-8 то, что пользователь ввел в input.i-8.
 
 function t8() {
     // value всегда получаем внутри функции
-    // let data = document.querySelector('.i-8').value; // получили значение
-    // тут выводим
+    let data = document.querySelector('.i-8').value; // получили значение
+    document.querySelector('.out-8').innerHTML = `${data}`;
+    document.querySelector('.i-8').value = '';
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -46,7 +55,9 @@ document.querySelector('.b-8').onclick = t8;
 // По нажатию на кнопку .b-9 выполняется функция t9, которая выводит в div.out-9 то, что пользователь ввел в input.i-9. Добавьте очистку input после нажатия кнопки.
 
 function t9() {
-
+    let data = document.querySelector('.i-9').value; // получили значение
+    document.querySelector('.out-9').innerHTML = `${data}`;
+    document.querySelector('.i-9').value = '';
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -55,7 +66,9 @@ document.querySelector('.b-9').onclick = t9;
 // По нажатию на кнопку .b-10 выполняется функция t10, которая выводит в div.out-10 то, что пользователь ввел в input.i-10 умноженное на 20.
 
 function t10() {
-
+    let data = document.querySelector('.i-10').value;
+    document.querySelector('.out-10').innerHTML = `${data}` * 20;
+    document.querySelector('.i-10').value = '';
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -64,7 +77,9 @@ document.querySelector('.b-10').onclick = t10;
 // По нажатию на кнопку .b-11 выполняется функция t11, которая выводит на страницу в .out-11 число, которое ввел пользователь в i-11 и к нему добавленное число 55. В этой задаче мы не приводим к числу полученное из input.
 
 function t11() {
-
+    let data = document.querySelector('.i-11').value;
+    document.querySelector('.out-11').innerHTML = `${data}` + 55;
+    document.querySelector('.i-11').value = '';
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -73,7 +88,9 @@ document.querySelector('.b-11').onclick = t11;
 // По нажатию на кнопку выполняется функция t12. Функция должна получить данные из input i.12-1 и i.12-2 (пользователь вводин в них фамилию и имя). После чего вывести в .out-12  строку 'Hello имя фамилия', где имя - имя пользователя и фамилия - введенная фамилия. Обращаю ваше внимание - с этого момента мы работаем строго по заданию. Hello - с большой буквы. Между Hello имя один пробел (вы же включили отображение пробелов?). Вы не добавляете "от себя" - запятые, любые другие слова и символы. Аналогичные правила действуют и дальше по курсу.
 
 function t12() {
-
+    let inp1 = document.querySelector('.i-12-1').value;
+    let inp2 = document.querySelector('.i-12-2').value;
+    document.querySelector('.out-12').innerHTML = inp1 + inp2;
 }
 
 document.querySelector('.b-12').onclick = t12;

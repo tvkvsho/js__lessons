@@ -35,6 +35,11 @@ grocBtn.onclick = () => {
     chocoOut.innerHTML = 'You will get ' + (Math.round(walletInp.value / chocoInp.value)) + ' chocolates. And your remaining is ' + (walletInp.value % chocoInp.value);
 }
 
-// Task 5 - reversed number
+// TASK 6 - Bank investment calculator
+let bankInp = document.querySelector('.bank-inp');
+let bankBtn = document.querySelector('.bank-btn');
+let bankOut = document.querySelector('.bank-out');
 
-
+bankBtn.onclick = () => {
+    bankOut.innerHTML = 'Your earnings is ' + ((+bankInp.value + (+bankInp.value*5/100)) + ((+bankInp.value + (+bankInp.value*5/100))*5/100));
+}

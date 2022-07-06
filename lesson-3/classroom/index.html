@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Lesson - 03</title>
+</head>
+
+<body>
+    <input class="inp" type="number" placeholder="Input">
+    <select class="sel">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+    </select>
+    <input type="number" class="inp2">
+    <button class="btn">Calculate</button>
+    <h2 class="out"></h2>
+
+    <script>
+        let inp = document.querySelector('.inp');
+        let sel = document.querySelector('.sel');
+        let inp2 = document.querySelector('.inp2');
+        let btn = document.querySelector('.btn');
+        let out = document.querySelector('.out');
+
+        btn.onclick = () => {
+            switch (sel.value) {
+                case '+':
+                    out.innerHTML = `${inp.value} + ${inp2.value} = ${+inp.value + +inp2.value}`;
+                    break;
+
+                case '-':
+                    out.innerHTML = `${inp.value} - ${inp2.value} = ${+inp.value - +inp2.value}`;
+                    break;
+
+                case '*':
+                    out.innerHTML = `${inp.value} * ${inp2.value} = ${+inp.value * +inp2.value}`;
+                    break;
+
+                default:
+                    out.innerHTML = 'Please enter correct data'
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

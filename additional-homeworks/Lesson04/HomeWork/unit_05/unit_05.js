@@ -3,8 +3,13 @@
 //     1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_
 // Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
-
 function t1() {
+
+    let out = "";
+    for (let i = 1; i <= 16; i++) {
+        out += i + "_"
+    }
+    document.querySelector('.out-1').innerHTML = out;
 
 }
 
@@ -16,7 +21,11 @@ document.querySelector('.b-1').onclick = t1;
 //Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t2() {
-
+    let out = "";
+    for (let i = 12; i <= 38; i++) {
+        out += i + "_"
+    }
+    document.querySelector('.out-2').innerHTML = out;
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -69,7 +78,12 @@ document.querySelector('.b-5').onclick = t5;
 //
 
 function t6() {
-
+    let out = "";
+    let inp = +document.querySelector('.i-6').value;
+    for (let i = 1; i <= inp; i++) {
+        out += "******<br>"
+    }
+    document.querySelector('.out-6').innerHTML = out;
 }
 
 document.querySelector('.b-6').onclick = t6;

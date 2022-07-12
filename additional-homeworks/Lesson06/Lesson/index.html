@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="name">
+    <input type="number" placeholder="age">
+    <input type="text" placeholder="country">
+
+    <button>Registration</button>
+
+    <ul class="nav">
+
+    </ul>
+
+
+    <div>
+        <input class="serch-inp" type="text" placeholder="Station">
+        <button class="btn">Serch</button>
+        <h2>Station</h2>
+
+        <ul class="out2"></ul>
+    </div>
+    <script>
+
+
+        let nav = document.querySelector('.nav');
+
+        const user = {
+            'name': "Sasha99",
+            'age': 22,
+            'country': "Ukraine",
+            'status': false,
+            'url': 'https://www.instagram.com/feshchenko_misha/'
+        }
+
+        for (let key in user) {
+            console.log(key); // Виводить ключ
+            console.log(user[key]); // Виводить значення ключа
+        }
+
+        // // user.name
+        // delete user.age; //Видаляти значення
+        // user.town = 'Kiyv'; // Додаемо ключ до обекту
+
+        // for (let key in user) {
+        //     //console.log(key); // Виводить ключ
+        //     //console.log(user[key]); // Виводить значення ключа
+        //     res += `
+        //     <li class='nav__li'>
+        //         ${key}: ${user[key]}
+        //     </li>
+        //     `
+        // }
+
+        // out.innerHTML = res;
+
+        // console.log(user);
+        let a18 = {
+            "red": ['Akademmistechko', 'Nyvky', 'Universytet', 'Lisova'],
+            "blue": ['Minska', 'Obolon', 'Pochaina', 'Holosiivska'],
+            "green": ['Syrets', 'Zoloti Vorota', 'Klovska', 'Vidubichi']
+        }
+
+        let inp = document.querySelector('.serch-inp');
+        let out = document.querySelector('.out2');
+        let btn = document.querySelector('.btn');
+
+        let res2 = '';
+        let b = 1;
+        btn.onclick = () => {
+            // for (let key in a18) {
+            //     switch (inp.value) {
+            //         case 'red':
+            //             for (let i = 0; i < a18.red.length; i++) {
+            //                 if (b === 1) {
+            //                     res += a18.red[i] + "_";
+            //                 }
+            //             }
+            //             b = 0;
+            //             break;
+            //         case 'blue':
+            //             console.log("blue");
+            //             break;
+            //         case 'green':
+            //             console.log("green");
+            //             break;
+            //     }
+            // }
+            let res = ' ';
+            for (let key in a18) {
+                if (inp.value.toLowerCase() == key) {
+                    for (let arr in a18[key]) {
+                        res += a18[key][arr] + " => ";
+                    }
+                    break;
+                } else {
+                    res = "Помилка!!";
+                }
+            }
+            out.innerHTML = res;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -242,9 +242,9 @@ document.querySelector('.b-12').onclick = t12;
 // С помощью цикла присвойте всем input .i-13 value равное 1 для первого, 2 для второго и 3 для третьего.
 
 function t13() {
-    let divs13 = document.querySelectorAll('div.div-13');
-    for (let i = 0; i < divs13.length; i++) {
-        divs13[0].value = 1; 
+    let divs13 = document.querySelectorAll('input.i-13');
+    for (let i = 0; i < divs13.length; i++){
+        divs13[i].value = i + 1
     }
 }
 
@@ -258,7 +258,16 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
+    let divs14 = document.querySelectorAll('input.i-14');
+    let out = '';
 
+    for (let i = 0; i < divs14.length; i++){
+        if (divs14[i].checked) {
+            out += divs14[i].value;
+        }
+    }
+
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -269,7 +278,12 @@ document.querySelector('.b-14').onclick = t14;
 // Подсказка (10 - i) + '_' + i + '_'
 
 function t15() {
+    let out = '';
 
+    for (let i = 0; i <= 10; i++) {
+        out += (10 - i) + '_' + i + '_'
+    }
+    document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = t15;

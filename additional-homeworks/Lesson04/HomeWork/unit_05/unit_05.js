@@ -23,7 +23,9 @@ document.querySelector('.b-1').onclick = t1;
 function t2() {
     let out = "";
     for (let i = 12; i <= 38; i++) {
-        out += i + "_"
+        if (i % 2 == 0) {
+            out += i + '_'
+        }
     }
     document.querySelector('.out-2').innerHTML = out;
 }
@@ -37,6 +39,11 @@ document.querySelector('.b-2').onclick = t2;
 // Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t3() {
+    let out = '';
+    for (let i = 25; i >= 7; i--) {
+        out += i + '_'
+    }
+    document.querySelector('.out-3').innerHTML = out;
 
 }
 
@@ -49,6 +56,11 @@ document.querySelector('.b-3').onclick = t3;
 
 
 function t4() {
+    let out = '';
+    for (let i = 77; i >= 35; i-=3) {
+        out += i + '_';
+    }
+    document.querySelector('.out-4').innerHTML = out;
 
 }
 
@@ -61,7 +73,15 @@ document.querySelector('.b-4').onclick = t4;
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
 
 function t5() {
-
+    let out = '';
+    for (let i = 1; i <= 17; i++) {
+        if (i % 2 == 0) {
+            out += i + '_**'
+        } else {
+            out += i + '_*'
+        }
+    }
+    document.querySelector('.out-5').innerHTML = out;
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -97,7 +117,13 @@ document.querySelector('.b-6').onclick = t6;
 // Задача решается с помощью цикла.
 
 function t7() {
+    let out = '';
+    let inp = document.querySelector('.i-7').value;
+    for (let i = inp; i >= 0; i--) {
+        out += i + '_';
+    }
 
+    document.querySelector('.out-7').innerHTML = out;
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -112,7 +138,14 @@ document.querySelector('.b-7').onclick = t7;
 // Задача решается с помощью цикла.
 
 function t8() {
+    let out = '';
+    let inp1 = document.querySelector('.i-81').value;
+    let inp2 = document.querySelector('.i-82').value;
 
+    for (let i = inp1; i <= inp2; i++) {
+        out += i + '_'
+    }
+    document.querySelector('.out-8').innerHTML = out;
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -129,7 +162,20 @@ document.querySelector('.b-8').onclick = t8;
 // цикл - один
 
 function t9() {
+    let out = '';
+    let inp1 = document.querySelector('.i-91').value;
+    let inp2 = document.querySelector('.i-92').value;
 
+    if (inp1 < inp2) {
+        for (let i = inp1; i <= inp2; i++){
+            out += i + '_'
+        }
+    }   else if (inp1 > inp2) {
+        for (let i = inp2; i <= inp1; i++){
+            out += i + '_'
+        }
+    }
+    document.querySelector('.out-9').innerHTML = out;
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -140,7 +186,15 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель - знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
+    let out = '';
+    let a = 1950;
+    let b = 1970;
+    
+    for (let i = a; i <= 1970; i++) {
+        out += i % 2 == 0 ? i : '_'
+    }
 
+    document.querySelector('.out-10').innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -155,7 +209,14 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
+    let out = '';
+    let divs11 = document.querySelectorAll('div.div-11');
 
+    for (let i = 0; i < divs11.length; i++) {
+        out += divs11[i].innerHTML + '_';
+    }
+    
+    document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -168,7 +229,11 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
+    let divs12 = document.querySelectorAll('div.div-12');
 
+    for (let i = 0; i < divs12.length; i++) {
+        divs12[i].style.background = "orange"
+    }
 }
 
 document.querySelector('.b-12').onclick = t12;
@@ -177,7 +242,10 @@ document.querySelector('.b-12').onclick = t12;
 // С помощью цикла присвойте всем input .i-13 value равное 1 для первого, 2 для второго и 3 для третьего.
 
 function t13() {
-
+    let divs13 = document.querySelectorAll('div.div-13');
+    for (let i = 0; i < divs13.length; i++) {
+        divs13[0].value = 1; 
+    }
 }
 
 document.querySelector('.b-13').onclick = t13;

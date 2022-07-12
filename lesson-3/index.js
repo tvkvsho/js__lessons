@@ -86,3 +86,35 @@ numBtn.onclick = () => {
     }
     numOut.innerHTML = `The sum of all numbers from ${numInp1.value} to ${numInp2.value} is ${sum}`;
 }
+
+// Task 4
+let divInp1 = document.querySelector('.max-div-inp1');
+let divInp2 = document.querySelector('.max-div-inp2');
+let divBtn = document.querySelector('.calc-divider');
+let divOut = document.querySelector('.out-divider');
+
+divBtn.onclick = () => {
+    let a = divInp1.value;
+    let b = divInp2.value;
+    let result;
+    while (a != b) {
+        if (a > b) {
+            a = a - b;
+        } else {
+            b = b - a;
+        }
+
+        result = a;
+    }
+
+    divOut.innerHTML = `The greatest divisor is ${result}`
+}
+
+// Task 5
+let allDivInp = document.querySelector('.all-dividers-inp');
+let allDivBtn = document.querySelector('.all-dividers-btn');
+let allDivOut = document.querySelector('.out-all-dividers');
+
+allDivBtn.onclick = () => {
+
+}

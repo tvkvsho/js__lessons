@@ -113,8 +113,16 @@ divBtn.onclick = () => {
 // Task 5
 let allDivInp = document.querySelector('.all-dividers-inp');
 let allDivBtn = document.querySelector('.all-dividers-btn');
-let allDivOut = document.querySelector('.out-all-dividers');
 
-allDivBtn.onclick = () => {
 
+function allDividers () {
+    let out = '';
+    for (let i = 1; i <= allDivInp.value; i++) {
+        if(allDivInp.value % i == 0){
+            out += i + ' ';
+        }
+    }
+
+    document.querySelector('.out-all-dividers').innerHTML = `Here are all dividers: ${out}`;
 }
+allDivBtn.onclick = allDividers;

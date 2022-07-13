@@ -88,27 +88,27 @@ numBtn.onclick = () => {
 }
 
 // Task 4
-let divInp1 = document.querySelector('.max-div-inp1');
-let divInp2 = document.querySelector('.max-div-inp2');
-let divBtn = document.querySelector('.calc-divider');
-let divOut = document.querySelector('.out-divider');
+let num1 = document.querySelector('.num1');
+let num2 = document.querySelector('.num2');
+let maxBtn = document.querySelector('.max-divider');
 
-divBtn.onclick = () => {
-    let a = divInp1.value;
-    let b = divInp2.value;
-    let result;
-    while (a != b) {
-        if (a > b) {
-            a = a - b;
-        } else {
-            b = b - a;
+function maxDiv () {
+    let out = '';
+    a = Math.abs(num1.value)
+    b = Math.abs(num2.value)
+
+    for (let i = 1; i <= a && i <= b; i++) {
+
+        if( a % i == 0 && b % i == 0) {
+            out = i;
         }
-
-        result = a;
     }
 
-    divOut.innerHTML = `The greatest divisor is ${result}`
+    document.querySelector('.max-div-out').innerHTML = out;
 }
+
+maxBtn.onclick = maxDiv;
+
 
 // Task 5
 let allDivInp = document.querySelector('.all-dividers-inp');

@@ -4,7 +4,7 @@
 let a1 = 8;
 
 function t1() {
-
+    document.querySelector('.out-1').innerHTML = a1;
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -15,8 +15,8 @@ document.querySelector('.b-1').onclick = t1;
 // Изменим задачу 1. Сейчас она только выводит переменную в заранее заданный блок. Давайте сделаем так, чтобы функция, была более гибкой. Пусть теперь функция t2 возвращает (return) переменную a2.Поскольку функция возвращает переменную, то имя функции со скобками (вызов функции) можно встраивать в выражения. Обратите внимание, как изменяется вызов функции теперь.
 
 let a2 = 8;
-function t2() {
-
+function t2(a) {
+    return 5;
     //return
 }
 
@@ -32,7 +32,7 @@ document.querySelector('.b-2').onclick = function () {
 // Наша предыдущая функция, сильно все еще зависима от внешних переменных. Давайте сделаем ее более универсальной. Пусть функция t3 принимает 2 аргумента и возвращает (return) их произведение. Допишите код функции так, чтобы она возвращала произведение двух чисел, переданных ей в качестве аргументов a, b. Протестируем функцию на двух примерах, с помощью кнопок .b-3-1 и .b-3-2.
 
 function t3(a, b) {
-
+    return a * b
 }
 
 document.querySelector('.b-3-1').onclick = function () {
@@ -47,7 +47,7 @@ document.querySelector('.b-3-2').onclick = function () {
 // Напишите функцию t4 которая принимает ваш год рождения  и вычисляет (возвращает) ваш возраст. 
 
 function t4(year) {
-
+    return 2022 - year
 }
 
 document.querySelector('.b-4').onclick = function () {
@@ -60,7 +60,7 @@ document.querySelector('.b-4').onclick = function () {
 
 
 function t5(yourName) {
-
+    return yourName.length
 }
 
 document.querySelector('.b-5').onclick = function () {
@@ -73,7 +73,7 @@ document.querySelector('.b-5').onclick = function () {
 // Напишите функцию t6, которая принимает 2 числа и возвращает случайное целое число от первого до второго принятого параметра. Внимание, это первая задача, решение которой нужно найти в google. Не пишите решение сами!
 
 function t6(a, b) {
-
+    return Math.floor(a + Math.random() * (b + 1 - a));
 }
 
 document.querySelector('.b-6').onclick = function () {
@@ -92,6 +92,12 @@ function t7() {
     // у вас есть функция t6, которая может генерировать случайные целые числа в нужном диапазоне. 
     // давайте воспользуемся ней. Просто запустим ее три раза внутри строки ниже
     //return `rgb(${t6(0,255)}....допишите сами
+
+    let randomRgb1 = Math.floor(0 + Math.random() * (255 + 1 - 0));
+    let randomRgb2 = Math.floor(0 + Math.random() * (255 + 1 - 0));
+    let randomRgb3 = Math.floor(0 + Math.random() * (255 + 1 - 0));
+
+    return `rgb(${randomRgb1},${randomRgb2},${randomRgb3})`
 }
 
 document.querySelector('.b-7').onclick = function () {
@@ -103,7 +109,7 @@ document.querySelector('.b-7').onclick = function () {
 // Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными пробелами в начале и вконце строки. Т.е.принимает _hello_(где знак _ символизирует пробел), а возвращает hello. Для удаления пробелов - используйте trim.
 
 function t8(str) {
-
+    return str.trim()
 }
 
 document.querySelector('.b-8').onclick = function () {
@@ -117,7 +123,7 @@ document.querySelector('.b-8').onclick = function () {
 // Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное. 
 
 function t9(num) {
-
+    return true ? num % 2 == 0 : false;
 }
 
 document.querySelector('.b-9').onclick = function () {
@@ -129,7 +135,11 @@ document.querySelector('.b-9').onclick = function () {
 // Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - первое.
 
 function t10(x, y) {
-
+    if (x > y) {
+        return x
+    } else {
+        return y
+    }
 }
 
 document.querySelector('.b-10').onclick = function () {

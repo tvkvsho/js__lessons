@@ -24,15 +24,13 @@ function f2() {
     let a2 = {
         "one": "hello",
         "two": "mahai",
-        "five": "hi"
+        "five": "hi",
     };
-
+    document.querySelector('.out-2').innerHTML = a2.five;
     // return
 }
 
-document.querySelector('.b-2').onclick = () => {
-    document.querySelector('.out-2').innerHTML = f2();
-}
+document.querySelector('.b-2').onclick = f2;
 
 
 // Task 3
@@ -50,6 +48,7 @@ function f3() {
         "mix": "mix"
     };
     // return
+    return a3.five
 }
 
 document.querySelector('.b-3').onclick = () => {
@@ -71,8 +70,12 @@ let a4 = {
     "mix": "mix"
 };
 function f4() {
+    out = '';
+    for (let key in a4) {
+        out += key + ' ' + a4[key] + '<br>';
+    }
 
-    // return out;
+    return out;
 }
 
 document.querySelector('.b-4').onclick = () => {

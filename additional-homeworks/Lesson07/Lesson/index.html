@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="out">
+    </div>
+
+
+    <script>
+
+        //let arr = ['Sasha', 111, true, {}, []]
+
+        let arr = [1, 2, 3, '4gf', 5, 6, 7, 8, 9, 'sasha'];
+
+        let arr0 = [
+            ['arr1', '12312', { name: 'sahsa', age: 12, img: 'star.jpeg' }],
+            ['arr2', 'asd', { name: 'sahsa2', age: 12, img: 'star.jpeg' }],
+            ['arr3', 'asd', 'fsd', 234, { name: 'sahsa3', age: 13, img: 'star.jpeg' }],
+        ]
+
+        let arr1 = [1, 2, 3, 4]
+        let arr2 = [5, 6, 7, 8]
+
+        let arrRes = [...arr1, ...arr2] // Зеднуе массив
+
+
+
+
+        // let newArr = arr1.concat(arr2)
+
+        // arr.push(10);
+        // arr.pop() && arr[arr.length - 1] // Одне і теж
+        // arr.shift() &&  arr[0] // Перший єлемент
+        // arr[arr.length] // Останній єлемент undefined
+        // arr.length // Довжина масиву
+
+        //console.log(arr);
+        // console.log(arr[arr.length - 1]);
+
+
+        // do{} while()
+        // while(){}
+        // for(){}
+        // for(in){}
+        // for(of){}
+
+
+        // delete arr[1] // Empty
+        // arr.splice(1, 1, "323", 'sdf', 2342342)
+        // arr.join(' ')
+
+        // console.log(...arr2);
+
+        // for (let value of arr0) {
+        //     console.log(value);
+        // }
+
+        let out = document.querySelector('.out');
+        let res = '';
+
+        function allMovie() {
+            for (let i = 0; i < arr0.length; i++) {
+                //console.log(arr0[i][2].name);
+                for (let j = 0; j < arr0[i].length; j++) {
+                    if (arr0[i][j].name) {
+                        res += `
+                    <div class="movie"> 
+                        <img src="./img/${arr0[i][j].img}">
+                        <h2 class="movie__title">Name: ${arr0[i][j].name}</h2>
+                        <h3 class="class="movie__description"">Age: ${arr0[i][j].age}</h3>
+                    </div>
+                   
+                    `
+                    }
+                }
+
+                // if (arr0[i][2].age == 12) {
+                //     console.log(arr0[i][2].name);
+                // }
+            }
+            out.innerHTML = res;
+        }
+
+        allMovie()
+
+        function serchFilm() { }
+        function serchGenr() { }
+
+
+
+
+
+
+        // console.log(arr.pop());
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOWEE</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="today__box">
+            <h1 class="today__title">What to watch today?</h1>
+            <div class="movie__today"></div>
+        </div>
+        <nav class="nav">
+            <div class="nav__item">
+                <input type="text" placeholder="Search by name" class="search-by-name">
+                <button class="name">Search</button>
+            </div>
+
+            <div class="nav__item">
+                <h5>Search by genre:</h5>
+                <select name="genres" id="genres">
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Biographical">Biographical</option>
+                    <option value="Criminal">Criminal</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Cartoon">Cartoon</option>
+                    <option value="Martial arts">Martial arts</option>
+                    <option value="Sci-fi">Sci-fi</option>
+                </select>
+                <button class="genre">Search</button>
+            </div>
+
+            <div class="nav__item">
+                <label for="c1">I have 18+</label>
+                <input id="c1" type="checkbox">
+            </div>
+
+            <div class="counter">0 всього</div>
+        </nav>
+        <div class="all-movies"></div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

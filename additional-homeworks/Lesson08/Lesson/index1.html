@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.addEventListener("load", function (event) {
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="out"></div>
+
+    <h2 class="h2"></h2>
+
+    <script>
+
+        function createBtn(text, out) {
+            let btn = `<button>${text}</button>`
+            document.querySelector(out).innerHTML = btn
+        }
+
+        //createBtn('Sasha', '.h2')
+
+        function createBtn2(title, text, out) {
+            let h1 = `<h1>${title}</h1>`
+            let btn = `<button>${text}</button>`
+            document.querySelector(out).innerHTML = h1 + btn
+        }
+
+        //createBtn2('Sasha', 'dss', '.out')
+
+
+        class createBtnClass {
+            constructor(a, b, c) {
+                this.title = a;
+                this.text = b;
+                this.out = c;
+            }
+            showBtn() {
+                document.querySelector(this.out).innerHTML = `
+                <h2>${this.title}</h2>
+                 <p>${this.text}</p>
+                 `
+            }
+        }
+
+        let a1 = new createBtnClass('Hello', 'Text text', '.out');
+        // a1.showBtn()
+
+
+        class createBtnClass2 extends createBtnClass {
+            constructor(a, b, c, i) {
+                super(a, b, c)
+                this.icon = i;
+            }
+            log() {
+                console.log("test");
+            }
+        }
+
+        let a2 = new createBtnClass2('Hello', 'Text text', '.out', 'http://idduuy')
+        a2.log()
+        console.log(a2);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        const arr = {
+            "lat": 39.31,
+            "lon": -74.5,
+            "timezone": "America/New_York",
+            "timezone_offset": -18000,
+            "current": {
+                "dt": 1646318698,
+                "sunrise": 1646306882,
+                "sunset": 1646347929,
+                "temp": 282.21,
+                "feels_like": 278.41,
+                "pressure": 1014,
+                "humidity": 65,
+                "dew_point": 275.99,
+                "uvi": 2.55,
+                "clouds": 40,
+                "visibility": 10000,
+                "wind_speed": 8.75,
+                "wind_deg": 360,
+                "wind_gust": 13.89,
+                "weather": [
+                    {
+                        "id": 802,
+                        "main": "Clouds",
+                        "description": "scattered clouds",
+                        "icon": "03d"
+                    }
+                ]
+            }
+        }
+
+        console.log(arr.lat + arr.current.clouds);
+
+
+
+
+    </script>
+</body>
+
+</html>

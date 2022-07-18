@@ -6,13 +6,19 @@
 }
 
 .wrapper{
+    position: relative;
     max-width: 80vw;
-    margin: 0 auto;
+    margin: 0 auto 2vw;
     padding: 1vw 0 0 0;
 }
 
 .movie__today {
-    margin: 0 0 5vh 0;
+    margin: 0 0 2vh 0;
+}
+
+.nav{
+    margin: 0 0 2vh 0;
+    gap: 40px;
 }
 
 .movie__today-img{
@@ -33,6 +39,39 @@
 nav {
     display: flex;
     align-items: center;
+}
+
+.nav__item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 1vw;
+    border-style: none;
+    border: 1px solid grey;
+}
+
+select{
+    padding: 5px 10px;
+    border-radius: 1vw;
+    border-style: none;
+    border: 1px solid grey;
+}
+
+button{
+    border-style: none;
+    border-radius: 10vw;
+    padding: 5px 10px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.back-to-all {
+    position: absolute;
+    bottom: -40px;
 }
 
 .today__title{

@@ -89,10 +89,16 @@ document.querySelector('.b-4').onclick = () => {
 function f5(arr, block) {
     let out = '';
     // цикл
+    for (let key in arr) {
+        out += `${key} : ${arr[key]} <br>`
+    }
     // формат вывода `${key} : ${arr[key]} <br>`;
     //
     // тут вывод в блок block
+    return out
 }
+
+document.querySelector('.b-5').onclick = f5
 
 // давайте протестируем f5
 

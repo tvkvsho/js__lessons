@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Get, Set class</h2>
+
+    <script>
+
+
+        class Plus1 {
+            constructor(num) {
+                this.num = num;
+            }
+            numPul(numUser) {
+                this.num = this.num + numUser;
+            }
+            numRes() {
+                return this.num;
+            }
+        }
+
+        const res = new Plus1(40);
+
+        class Plus2 {
+            constructor(num) {
+                this.num = num;
+            }
+            get getRe() {
+                return this.num;
+            }
+            set getRe(nemUser) {
+                this.num = this.num + nemUser;
+            }
+
+        }
+
+        const Num2 = new Plus2(10)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>addEventListener</h2>
+    <div class="out"></div>
+
+    <input type="radio" class="r1">
+    <input type="checkbox" class="i1">
+
+    <button id="c1" class="btn">
+        <span>test</span>
+    </button>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let out = document.querySelector('.out');
+
+        //btn.onclick = (e) => { console.log(this); }
+        // btn.onclick = function (e) { console.log('1'); }
+        // btn.onclick = function (e) { console.log('2'); }
+        // document.querySelector('.i1').onchange = function (e) { console.log('test'); }
+
+        // btn.addEventListener('click', function () {
+        //     console.log(1)
+        // })
+
+        function test() {
+            console.log(2)
+        }
+
+        btn.addEventListener('click', function () {
+            console.log(2)
+        })
+
+        document.querySelector('.i1').addEventListener('change', test)
+
+    </script>
+</body>
+
+</html>

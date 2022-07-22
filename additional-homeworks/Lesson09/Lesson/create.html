@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Create To Do list</h2>
+    <input class="text" type="text">
+    <button class="start">Add</button>
+    <div class="out"></div>
+    <div class="count">0</div>
+
+    <script>
+
+        let out = document.querySelector('.out')
+        let text = document.querySelector('.text')
+        let btn = document.querySelector('.start')
+
+        let coun = 0;
+
+
+        function createList() {
+
+
+            if (text.value == '' || text.value === ' ' || text.value === '  ') return; // Дз перевірю
+
+
+            let chekBox = document.createElement('input')
+            chekBox.classList.add('chebox')
+            chekBox.setAttribute('type', 'checkbox')
+            chekBox.onchange = () => {
+                console.log(chekBox.checked);
+                if (chekBox.checked) {
+                    list.classList.add('done')
+                    document.querySelector('.count').innerHTML = --coun;
+                } else if (!chekBox.checked) {
+                    list.classList.remove('done')
+                    document.querySelector('.count').innerHTML = ++coun;
+                }
+            }
+
+
+            let list = document.createElement('li')
+            list.classList.add('list')
+            list.innerHTML = text.value;
+            list.appendChild(chekBox)
+            out.appendChild(list)
+
+            document.querySelector('.count').innerHTML = ++coun;
+
+        }
+
+        btn.onclick = createList;
+
+
+    </script>
+</body>
+
+</html>

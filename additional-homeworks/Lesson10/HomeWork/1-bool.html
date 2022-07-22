@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            height: 100vh;
+            background: blue;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box"></div>
+    </div>
+    <script>
+
+        let cont = document.querySelector('.container');
+
+        cont.addEventListener('click', () => {
+            cont.addEventListener("mousemove", function (e) {
+                console.log(e.clientY);
+                this.querySelector('.box').style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            });
+        })
+
+
+    </script>
+</body>
+
+</html>

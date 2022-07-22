@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .title {
+            width: 50px;
+            background-color: red;
+        }
+
+        .box {
+            padding: 20px;
+            background: blue;
+            margin: 3px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .nav__menu {
+            display: none;
+        }
+
+        .nav.active {
+            background-color: red;
+        }
+
+        .nav.active .nav__menu {
+            display: block;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="title" data-speed="1234">1233</h2>
+    <button>+</button>
+    <button>-</button>
+    <span class="nav">
+        <span>
+            gam
+        </span>
+        <div class="nav__menu">
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+        </div>
+    </span>
+
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+
+    <script>
+
+
+        // let nav = document.querySelector('.nav')
+
+        // nav.onclick = () => {
+        //     nav.classList.toggle('active')
+        // }
+
+        // let box = document.querySelectorAll('.box')
+
+
+        // for (let i = 0; i < box.length; i++) {
+        //     box[i].onclick = () => {
+        //         box[i].classList.toggle('red')
+        //     }
+        // }
+
+
+        //box.classList.add('red');
+
+
+
+        // function plus(a, b) {
+        //     return a + b;
+        // }
+        //let out = document.querySelector('.title');
+        // out.setAttribute('scr', 'http://'); // Додаемо атрибут
+        // out.getAttribute('data-speed')
+
+        // console.log(out.getAttribute('data-speed'));
+
+        // console.log(plus(2, 2));
+        // document.write(plus(2, 2))
+        // out.innerHTML = "Result: " + plus(2, 2)
+        // out.style.backgroundColor = 'red'
+
+        // let h2Width = 100
+
+        // out.style.width = `${h2Width}px`
+
+
+        // out.onclick = () => {
+        //     out.style.width = `${h2Width = h2Width + 10}px`
+        // }
+
+        // console.log(out.style);
+    </script>
+</body>
+
+</html>

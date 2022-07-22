@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            height: 100vh;
+            background: blue;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div data-speed="2" class="box">123</div>
+        <div data-speed="9" class="box">123</div>
+        <div data-speed="3" class="box">123</div>
+        <div data-speed="2" class="box">123</div>
+        <div data-speed="5" class="box">123</div>
+        <div data-speed="2" class="box">123</div>
+    </div>
+    <script>
+        // window.addEventListener('resize', function () {}) // > 1200 only desktop
+        let cont = document.querySelector('.container');
+
+        cont.addEventListener("mousemove", function (e) {
+
+            this.querySelectorAll('.box').forEach((value) => {
+                let speed = value.getAttribute('data-speed');
+                console.log(speed);
+                value.style.transform = `translate(${e.clientX * speed / 10}px, ${e.clientY * speed / 10}px)`;
+            })
+        });
+
+    </script>
+</body>
+
+</html>
